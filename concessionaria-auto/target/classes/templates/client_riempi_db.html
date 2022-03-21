@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        const URL = "https://private-anon-5abc2d5a79-carsapi1.apiary-mock.com/manufacturers";
+
+        fetch(URL).then(e => e.json()).then(e => {
+
+            for (const auto of e) {
+                let marca = auto.name;
+                let modello = auto.img_url;
+                let prezzo = avg_price;
+                let anno = 2022;
+                let km = (Math.random() * 10000);
+                console.log(auto);
+            }
+
+        })
+
+    </script>
+</body>
+</html>
