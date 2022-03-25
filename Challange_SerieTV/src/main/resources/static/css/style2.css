@@ -1,0 +1,74 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("/img/cinema.jpg");
+    background-size: cover;
+    text-align: center;
+    margin: 100px 50px;
+}
+
+.nostra{
+    background-color: lightgray;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 60%;
+    margin: auto;
+}
+
+.nav li a{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin: 0 10px;
+}
+
+.nav li a:hover{
+    color: rgb(126, 126, 126);
+}
+
+h3{
+    font-size: 4em;
+    color: red;
+    margin-bottom: 50px;
+}
+
+.card{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    /* box-shadow: 0px 0px 30px rgb(0, 0, 0); */
+    background-color: lightgray;
+    padding: 50px;
+    width: 60%;
+    margin: auto;
+}
+
+.card img{
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    height: 600px;
+    width: 45%;
+    margin: auto;
+}
+
+#grazie{
+    color: red;
+    font-size: 1.5rem;
+    height: 10px;
+    margin-bottom: 0;
+}
+
+#btnBuy{
+    color: rgb(212, 212, 212);
+    box-shadow: 0px 0px 15px rgb(92, 92, 92);
+    background-color: #4267B2;
+    padding: 8px 20px;
+    border: 0px solid black;
+    border-radius: 30px;
+    margin: auto;
+    width: 15%;
+}
+
+#btnBuy:hover{
+    color: rgb(0, 0, 0);
+}
