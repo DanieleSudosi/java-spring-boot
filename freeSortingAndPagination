@@ -1,0 +1,34 @@
+  //service
+
+  public List<Soggetto>findSoggettiBySorting(String field){
+		return this.soggettoRepository.findAll(Sort.by(Sort.Direction.ASC,field));
+	}
+	
+	public Page<Soggetto> findSoggettiByPagination(int offset,int pageSize){
+		Page<Soggetto> soggetti =  this.soggettoRepository.findAll(PageRequest.of(offset, pageSize));
+		return soggetti;
+	}
+	
+	public Page<Soggetto> findSoggettiByPaginationAndSort(int offset,int pageSize,String field){
+		Page<Soggetto> soggetti =  this.soggettoRepository.findAll(PageRequest.of(offset, pageSize).withSort(Sort.by(field)));
+		return soggetti;
+	}
+  
+  //Rest
+  
+	@GetMapping("/sorting/{field}")
+	public List<Soggetto> getAllWithSort(@PathVariable String field){
+		return this.soggettoService.findSoggettiBySorting(field);
+	}
+	
+	//impaginare
+	@GetMapping("/pagination/{offset}/{pageSize}")
+	public Page<Soggetto> soggettiWithPagination (@PathVariable int offset,@PathVariable int pageSize){
+		return this.soggettoService.findSoggettiByPagination(offset,pageSize);
+	}
+	
+	@GetMapping("/paginationAndSort/{offset}/{pageSize}/{field}")
+	public Page<Soggetto> soggettiWithPagination (@PathVariable int offset,@PathVariable int pageSize, @PathVariable String field){
+		return this.soggettoService.findSoggettiByPaginationAndSort(offset,pageSize,field);
+	}
+	
